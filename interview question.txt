@@ -1,0 +1,211 @@
+Scenario Based Question :
+ 
+- Docker + EKS deployment
+	- mvn clean package
+	- Build docker image : docker build -t order-service:1.0 .
+	- Run locally : docker run -p 8080:8080 order-service:1.0
+	- Push Image to AWS ECR : aws ecr create-repository --repository-name order-service
+	- Login to ECR : aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 	
+<account-id>.dkr.ecr.ap-south-1.amazonaws.com
+	- tag Image : docker tag order-service:1.0 <account-id>.dkr.ecr.ap-south-1.amazonaws.com/order-service:1.0
+	- Push Image : docker push <account-id>.dkr.ecr.ap-south-1.amazonaws.com/order-service:1.0
+	- Create EKS Cluster (eksctl) : eksctl create cluster --name microservices-cluster --region ap-south-1
+	- Configure kubectl : aws eks --region ap-south-1 update-kubeconfig --name microservices-cluster
+	- Apply deployment : kubectl apply -f deployment.yaml
+	- Apply service : kubectl apply -f service.yaml
+	- Expose via ALB : kubectl apply -f ingress.yaml
+	- Horizontal Scallig : kubectl apply -f hpa.yaml
+	- Rolling updates : kubectl set image deployment/order-service order-service=<new-image>
+	- Logs : kubectl logs <pod>
+	- metrics : Prometheus + Grafana , CloudWatch
+ 
+- OAuth2 + JWT
+- API Composition
+- GraphQL 
+- Use modern GC (G1/ZGC)
+- How API Gatway manage and handle API security
+ 
+- Key principles of a good solution architecture:
+ 
+	Business → Alignment, cost, governance
+	Design → Simplicity, modularity, reusability
+	Quality → Performance, scalability, reliability
+	Operations → Maintainability, observability
+	Risk → Security, compliance
+ 
+- Domain-Driven Design (DDD) is an approach to software development that focuses on modeling software based on the real-world business domain. It helps build systems that closely reflect business needs, reduce complexity, and improve collaboration between technical and business teams.	
+ 
+ 
+ 
+1. How to convert Monolithic into Microserrvices - Strangler Fig Pattern
+2. Java 17 Memory design and features
+	- G1, ZGC, and Shenandoah for better performance and introduces features like records, sealed classes, and pattern matching
+3. Springboot security implementation
+4. Handle huge requests at a time in microservices
+5. Handle Idemptency in microservices 
+6. handle Transaction management in SPringboot/microservices
+	- “In Spring Boot, we use @Transactional for local transactions, but in microservices we implement Saga pattern (event-driven or orchestration) with compensating transactions to maintain eventual consistency.”
+7. API Gateway , Circuit Breaker , Health check
+8. Logging and Monitoring of Microservices 
+	- “We use Spring Boot Actuator for health checks, Prometheus for metrics, Grafana for dashboards, and Alertmanager for alerts. Kubernetes liveness/readiness ensures auto-recovery, while centralized logging helps in root cause analysis.”
+9. Upgrade version of java and springboot microservices 
+	-  mvn rewrite:run , mvn org.openrewrite.maven:rewrite-maven-plugin:run
+10. Docker and Kubernetes script file.
+11. How to identify and solve slowness of microservices.
+12. Implement Logging Framework in microservices. - Sidecar Pattern
+13. Blue and Green and Canary Deplyment. 
+	- “Blue-Green ensures zero downtime with full switch, while Canary reduces risk by gradually shifting traffic. In production, we combine both—start with Canary, then complete a Blue-Green switch for safe deployment and quick rollback.”
+14. ACID properties.
+15. How Spring Boot application starts internally
+16. Profiles configuration & handling multiple databases in one application
+ 
+ 
+ 
+1. Your Java application suddenly starts throwing OutOfMemoryError. How will you debug it?
+	- Enable JVM 
+			-XX:+HeapDumpOnOutOfMemoryError
+			-XX:HeapDumpPath=/tmp/heapdump.hprof
+	- Analyse HEap Dump
+			Eclipse MAT (most popular)
+			VisualVM
+	- Check GC
+			jstat -gc <pid> 1000
+	- Thread Dump
+			jstack <pid>
+	- JVM Tuning
+			-Xms2g
+			-Xmx4g
+			-XX:MaxMetaspaceSize=512m
+ 
+ 
+2. You see high CPU usage but low traffic. What could be the reason?
+3. A thread is stuck in BLOCKED state. How will you identify and fix it?
+4. Your application slows down after running for a few hours. What will you check?
+5. You are facing frequent GC pauses. How will you optimize it?
+6. A HashMap is causing performance issues under heavy load. Why?
+	- HashMap slows down due to collisions, resizing, and concurrency issues
+7. Multiple threads are updating shared data incorrectly. How will you fix it?
+8. Your API works fine locally but fails in production. What will you investigate?
+9. You suspect a memory leak. How will you confirm it?
+10. A service becomes unresponsive randomly. What could be happening?
+11. You see deadlock in your system. How will you detect and resolve it?
+12. Your logs show inconsistent behavior across requests. Why?
+13. Your application crashes without any clear error. How will you debug it?
+14. A database call is slowing down your Java service. How will you optimize it?
+15. Your thread pool gets exhausted under load. What’s your approach?
+16. You need to handle high concurrency safely. What will you use?
+17. Your system processes duplicate requests. How will you handle it?
+18. A cache is giving stale data. How will you fix it?
+19. Your application is not scaling even after adding instances. Why?
+20. You need to trace a request across multiple layers. How will you do it?
+1. An API suddenly starts responding in 8 seconds after deployment. How would you debug it?
+2. Database connections are getting exhausted during peak traffic. What would you check first?
+3. A service works fine in staging but crashes randomly in production. How would you investigate?
+4. Kafka consumers are falling behind and message lag keeps increasing. What could be causing it?
+5. Multiple requests are creating duplicate payments in the system. How would you prevent that?
+6. A memory issue appears only after the application runs for several hours. How would you debug it?
+7. A retry mechanism is causing even more traffic during failures. How would you handle it?
+8. CPU usage is low, but requests are timing out continuously. What could be wrong?
+9. A cache layer improves performance initially but later causes inconsistent data. How would you solve it?
+10. Thread pool exhaustion starts happening under moderate traffic. What areas would you inspect?
+11. Logs exist, but tracing a request across services is still difficult. What would you implement?
+12. A deployment suddenly increases 4xx errors across APIs. What might have changed?
+13. One slow database query starts affecting the entire application. How would you identify it?
+14. Scheduled jobs start running multiple times in distributed instances. How would you control it?
+15. APIs are returning stale data after scaling the application horizontally. What could cause that?
+16. A service becomes slow only during garbage collection cycles. How would you optimize it?
+17. Message processing works locally but fails intermittently in production queues. What would you check?
+18. High traffic causes sudden spikes in response latency even after autoscaling. Why could this happen?
+19. Users report data inconsistency between two microservices. How would you debug the issue?
+20. Suddenly Kubernetes Pods restarted. How to debug and possible issues.
+21. Create Room using Java Design Patterns.
+22.
+ 
+🔹 Core Java
+	•	What is a Functional Interface? Is @FunctionalInterface mandatory?
+	•	Difference between wait() vs sleep()
+	•	Explain OOP concepts
+	•	What is Singleton Design Pattern?
+	•	Explain Optional class and orElse vs orElseGet
+	•	Java 8 Streams → map, filter, forEach
+	•	Intermediate vs Terminal operations
+	•	Print duplicates in array / first duplicate using streams
+	•	Fail-Fast vs Fail-Safe
+ 
+ 
+🔹 Spring Boot
+	•	What is @RestController?
+	•	Important Spring Boot annotations
+	•	Class-level vs Method-level mapping (@RequestMapping, @PostMapping)
+	•	What is @Qualifier?
+	•	How does @Transactional work? (Rollback scenario 🔥)
+	•	How to handle global exceptions?
+	•	Bean scopes → Singleton (default)
+	•	Design patterns used in Spring Boot
+ 
+ 
+🔹 Spring Security
+	•	Authentication vs Authorization
+	•	High-level flow of user authentication
+	•	What information is stored in Authentication object
+ 
+ 
+🔹 Microservices & System Design
+	•	What is an API Gateway?
+	•	What is a Distributed Transaction (Layman explanation)
+	•	How to test distributed transactions (Saga, failure scenarios, idempotency)
+ 
+ 
+🔹 SQL
+	•	Find Second Highest Salary
+	•	DELETE vs TRUNCATE
+	•	Query optimization techniques
+	•	Normalization (1NF, 2NF, 3NF)
+	•	SQL Joins (Inner, Left, Right)
+🔹 final vs finally
+🔹 How Spring Boot application starts internally
+🔹 Convert List to Map using Java Streams
+🔹 Sort a list and remove duplicates using Streams
+🔹 Spring Boot annotations
+🔹 Profiles configuration & handling multiple databases in one application
+🔹 Java 21 features
+🔹 Optional class in Java
+🔹 Handling NullPointerExceptions
+🔹 Exception handling concepts
+🔹 Custom exception creation
+🔹 Global exception handling using annotations (@ControllerAdvice)
+🔹 String concepts in Java
+🔹 Java 8 features
+🔹 RESTful APIs
+🔹 Microservices communication methods
+🔹 API Gateway concepts
+🔹 End-to-end working flow of REST APIs
+🔹 AWS S3 basics and integrations
+🔹 Production support scenarios
+🔹 Hashing, concurrent hashmap working
+🔹 Garbage Collection
+👉 If an application becomes slow, what checks/actions would you take?
+🔹 Caching concepts and implementation	
+ 
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+Program Quesations :
+ 
+HashMap Internal Working: Explain how HashMap works internally (hashing, bucket structure, put/get mechanisms)
+.Immutable Classes: Define immutability and write a custom immutable class in Java
+.Java OOPs: Explain method hiding, overloading vs. overriding, and whether Java is a purely Object-Oriented language
+.Collections Framework: Write a program to create an ArrayList from an array - done
+.Multithreading: Explain ExecutorService and solve the Producer-Consumer problem - done
+.Strings: Write a program to find the frequency of a given character in a sorted string.
+.Array Problems: Find the length of the longest subsequence with contiguous integers
+.Sorting/Searching: Find the median of two sorted arrays
+.String Manipulation: Implement algorithms for string manipulation, such as finding frequencies.
+Java 8: Streams & Functional ProgrammingThe most common coding tasks involve processing collections efficiently
+.Find Duplicate Elements: Given a list of integers, find all duplicate values.Approach: Use Collectors.groupingBy with Collectors.counting() and filter for counts > 1
+.Highest/Nth Highest Number: Find the second or nth highest number in a list.Approach: Use .stream().sorted(Comparator.reverseOrder()).skip(n-1).findFirst()
+.Separate Odd and Even Numbers: Partition a list into two groups based on whether they are even or odd.Approach: Use Collectors.partitioningBy(n -> n % 2 == 0)
+.Frequency of Characters: Count the occurrence of each character in a given string.Approach: Convert the string to a stream of characters and use groupingBy with counting()
+.Data Carriers (Records): Explain and implement a simple Record.Interview Goal: Show how a record Person(String name, int age) {} replaces boilerplate like getters, equals(), hashCode(), and toString()
+.Pattern Matching for instanceof: Rewrite a block of code that checks a type and then casts it.Java 17 style: if (obj instanceof String s) { System.out.println(s.toLowerCase()); } (no manual casting needed)
+.Switch Expressions: Convert a traditional switch statement into an expression.Java 17 style: Use the arrow syntax (->) and the yield keyword for returning values, which eliminates the need for break statements
+.Sealed Classes: Create a hierarchy where only specific classes can extend a base class.Keywords: sealed, permits, non-sealed
