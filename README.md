@@ -6,3 +6,6 @@ https://www.hackerrank.com/test-v2/a7dq8nd8d36/login?b=eyJ1c2VybmFtZSI6InNpZHBhc
 https://platform.hyrgpt.com/apply-job-details/69a581fed1d91153cc1e08d3?attempt=6acdc468c8cae261a04ea303&region=india
 
 http://url3718.hyrgpt.com/ls/click?upn=u001.qVj1HU6CfZUI2cAGnyBTAO23pBHCwyL3Wjvrh5FOr1NlKTHpURZPTfKhoho-2FZOJhTw7N-2BtqJavntHSQBaElRcTxcRp2q6iGcXWOAPI6M69W6jbtnrzv7mquo6yLcUmP-2FM4CPe0hzmzXxhLf2RJcSAPbzh6t8ZrQyaaSgC4-2BBtkg-3DvtES_lH3UoCcEZklsaOJX5UDL2sy3u533-2F9JVmoFdDBb1vBd-2BxKlbSJAdDNJXUXExN8bLbXJnmc-2BkQq2ffWLFncguMkBtxi2YNelkdUQPTpDEqyXvHFNZdAFtJah0XlcqThcjxRjBBFB4-2FM9x9rLegEvlbjlMN8DAlm3R1tUWQk4gjqK4DPiaUH4wG9oOnvimM5pCsPd6K0v2BJ2oKswqAim0zw-3D-3D
+
+
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_ODgyNmVlZjUtN2MzMC00MmVjLWI1MTItNGI4MmNjZDdkZWRl%40thread.v2/0?context=%7b%22Tid%22%3a%22ff355289-721e-4dd7-a663-afec62ab9d54%22%2c%22Oid%22%3a%22aad97baf-0dd2-4ad6-98d9-55e09ee57ff9%22%7d
