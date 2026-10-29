@@ -7,6 +7,7 @@ https://platform.hyrgpt.com/apply-job-details/69a581fed1d91153cc1e08d3?attempt=6
 
 http://url3718.hyrgpt.com/ls/click?upn=u001.qVj1HU6CfZUI2cAGnyBTAO23pBHCwyL3Wjvrh5FOr1NlKTHpURZPTfKhoho-2FZOJhTw7N-2BtqJavntHSQBaElRcTxcRp2q6iGcXWOAPI6M69W6jbtnrzv7mquo6yLcUmP-2FM4CPe0hzmzXxhLf2RJcSAPbzh6t8ZrQyaaSgC4-2BBtkg-3DvtES_lH3UoCcEZklsaOJX5UDL2sy3u533-2F9JVmoFdDBb1vBd-2BxKlbSJAdDNJXUXExN8bLbXJnmc-2BkQq2ffWLFncguMkBtxi2YNelkdUQPTpDEqyXvHFNZdAFtJah0XlcqThcjxRjBBFB4-2FM9x9rLegEvlbjlMN8DAlm3R1tUWQk4gjqK4DPiaUH4wG9oOnvimM5pCsPd6K0v2BJ2oKswqAim0zw-3D-3D
 
+https://teams.microsoft.com/meet/432247115116840?p=T4TPCuYAeZYRFpTM9l
 
 https://teams.microsoft.com/l/meetup-join/19%3ameeting_YWJlM2ViNDUtNTgwNy00ODc3LTliZWMtNDRkMTQ3NDg2OTM1%40thread.v2/0?context=%7b%22Tid%22%3a%22665b6c62-7310-4d39-9abb-32a0cbc3b90f%22%2c%22Oid%22%3a%224320a039-43c4-479a-bc80-7ea7d3d293ad%22%7d
 
