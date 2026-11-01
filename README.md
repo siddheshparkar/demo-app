@@ -3,6 +3,8 @@ https://pages.talview.com/cds/live-session/verification/index.html?c=-w3Bu3izvRE
 https://deloitte.zoom.us/j/96920135874?pwd=kLM9WiGx7X0ktbCtEDkFI769HLiKln.1
 
 
+https://teams.microsoft.com/meet/486206674844234?p=mu0XUYogCEGb8Arvw7
+
 https://www.hackerrank.com/test-v2/a7dq8nd8d36/login?b=eyJ1c2VybmFtZSI6InNpZHBhcmthcjQ1NkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImM3NjVhNDY1IiwiaGlkZSI6dHJ1ZSwiYWNjb21tb2RhdGlvbnMiOnsiYWRkaXRpb25hbF90aW1lX3BlcmNlbnQiOjB9fQ==
 
 https://platform.hyrgpt.com/apply-job-details/69a581fed1d91153cc1e08d3?attempt=6acdc468c8cae261a04ea303&region=india
