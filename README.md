@@ -3,6 +3,8 @@ https://pages.talview.com/cds/live-session/verification/index.html?c=-w3Bu3izvRE
 https://deloitte.zoom.us/j/96920135874?pwd=kLM9WiGx7X0ktbCtEDkFI769HLiKln.1
 
 
+https://tests.mettl.com/take-test?ecc=AQ3%2BVe2019YyNbpYbInM7UeVlnuNVoL5qOzs%2BSm%2F1dxFo4eXqv%2FTN0QOvbTL3S63
+
 https://teams.microsoft.com/meet/486206674844234?p=mu0XUYogCEGb8Arvw7
 
 https://www.hackerrank.com/test-v2/a7dq8nd8d36/login?b=eyJ1c2VybmFtZSI6InNpZHBhcmthcjQ1NkBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImM3NjVhNDY1IiwiaGlkZSI6dHJ1ZSwiYWNjb21tb2RhdGlvbnMiOnsiYWRkaXRpb25hbF90aW1lX3BlcmNlbnQiOjB9fQ==
