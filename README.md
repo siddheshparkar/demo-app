@@ -1,3 +1,7 @@
+
+https://hdfcbank-cp.ripplehire.com/candidate-portal/login?page=setpassword&utoken=MzA1ZGJkZWQtNTI3OC00ZTc3LTk5MDYtZWFiOWEyZmM5NWYz&rtoken=Yzg0M2VlMWEtZjU0NS00NDVmLWEwMzAtMTM3YjljYmI2NmFj&role=ROLE_CANDIDATE&langCd=en
+
+
 https://pages.talview.com/cds/live-session/verification/index.html?c=-w3Bu3izvREV38rXqw3FHinNz-fZC5dHO6T31wNLaHQxNzkxNTUzNTE2NjUyNjc5NjU_&link=https://l.tlv.sh/_-6oUll0b
 
 https://deloitte.zoom.us/j/96920135874?pwd=kLM9WiGx7X0ktbCtEDkFI769HLiKln.1
